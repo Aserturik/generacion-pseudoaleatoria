@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Congruencial Lineal</title>
+</head>
+<body>
+    <h1>Método Congruencial Lineal</h1>
+    <form method="post">
+        <label>X0:</label> <input type="number" name="X0" required>
+        <label>k:</label> <input type="number" name="k" required>
+        <label>c:</label> <input type="number" name="c" required>
+        <label>g:</label> <input type="number" name="g" required>
+        <label>Mínimo:</label> <input type="number" step="0.01" name="minimo" required>
+        <label>Máximo:</label> <input type="number" step="0.01" name="maximo" required>
+        <label>Iteraciones (n):</label> <input type="number" name="n" required>
+        <button type="submit">Generar</button>
+    </form>
+
+    {% if imagen %}
+        <h2>Gráfico</h2>
+        <img src="data:image/png;base64,{{ imagen }}">
+    {% endif %}
+
+    {% if resultados %}
+        <h2>Resultados</h2>
+        <table border="1">
+            <tr>
+                <th>i</th>
+                <th>Xi</th>
+                <th>Ri</th>
+                <th>Ni</th>
+            </tr>
+            {% for i, xi, ri, ni in resultados %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>{{ xi }}</td>
+                <td>{{ ri }}</td>
+                <td>{{ ni }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
