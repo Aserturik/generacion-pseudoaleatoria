@@ -34,9 +34,12 @@
         box-shadow: none; /* Quitar el efecto de sombra */
       }
 
-      .btn-primary:focus {
-        outline: none; /* Quitar el borde azul al hacer clic */
-        box-shadow: none; /* Quitar el efecto de sombra al hacer clic */
+      .btn-primary:focus,
+      .btn-primary:active {
+        color: #ffffff !important; /* Texto blanco al hacer clic o enfocar */
+        background-color: #4a5a6e; /* Fondo ligeramente más oscuro */
+        outline: none; 
+        box-shadow: none; /* Quitar el efecto de sombra */
       }
 
       .btn-primary:hover {
