@@ -38,7 +38,7 @@ def generate_plot(freq_table, freq):
     # Se crea un array con los valores de los centros de los intervalos
     centers = np.arange(len(freq_table)) + 0.5
     # Se crea un gráfico de barras con los valores de los centros de los intervalos y las frecuencias
-    ax.bar(centers, freq, width=1, color="purple")
+    ax.bar(centers, freq, width=1, color="blue")  # Cambiado de "purple" a "blue"
     # Se establece el título del gráfico
     ax.set_xlabel("Intervalos")
     ax.set_ylabel("Frecuencia")
