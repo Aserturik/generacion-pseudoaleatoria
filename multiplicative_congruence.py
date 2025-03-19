@@ -24,6 +24,7 @@ def calculate_xi(xi, t, g):
     # Se hace asi para evitar que el valor de xi sea mayor a g
     return (t * xi) % g
 
+
 def calculate_ri(xi, g):
     # Se calcula el valor de ri con la fórmula xi / (g - 1)
     # Es de esta forma para que el valor de ri sea un número entre 0 y 1
