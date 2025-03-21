@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import mpld3
 
+
 def calculate_interval(iterations, data):
     # Se calcula el número de intervalos con la fórmula 1 + 3.322 * log10(iterations) que es la regla de Sturges
     result = 1 + 3.322 * np.log10(iterations)
@@ -11,7 +12,7 @@ def calculate_interval(iterations, data):
     min_val = min(data)
     max_val = max(data)
     # Se calcula la diferencia entre el valor máximo y mínimo dividido entre el número de intervalos
-    #Con el fin de obtener el tamaño de los intervalos
+    # Con el fin de obtener el tamaño de los intervalos
     diff = (max_val - min_val) / intervals if intervals > 0 else 1
     data.sort()
 
@@ -38,7 +39,8 @@ def generate_plot(freq_table, freq):
     # Se crea un array con los valores de los centros de los intervalos
     centers = np.arange(len(freq_table)) + 0.5
     # Se crea un gráfico de barras con los valores de los centros de los intervalos y las frecuencias
-    ax.bar(centers, freq, width=1, color="blue")  # Cambiado de "purple" a "blue"
+    # Cambiado de "purple" a "blue"
+    ax.bar(centers, freq, width=1, color="blue")
     # Se establece el título del gráfico
     ax.set_xlabel("Intervalos")
     ax.set_ylabel("Frecuencia")

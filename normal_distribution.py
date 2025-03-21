@@ -16,9 +16,9 @@ def normal_distribution(std_dev, num_samples, mean):
         # distribución normal a partir de dos números aleatorios con distribución uniforme
         x = math.sqrt(-2.0 * math.log(u)) * math.cos(2.0 * math.pi * v)
         # Se agrega el valor de x multiplicado por la desviación estándar a ri_array
-        #Se realiza así para que ri sea un número con distribución normal
+        # Se realiza así para que ri sea un número con distribución normal
         ri_array.append(x * std_dev)
         # Se agrega el valor de la media más x multiplicado por la desviación estándar a ni_array
-        #se suma la media porque la media es el valor esperado de la distribución normal
+        # se suma la media porque la media es el valor esperado de la distribución normal
         ni_array.append(mean + x * std_dev)
     return ri_array, ni_array
